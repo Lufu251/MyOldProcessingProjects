@@ -1,0 +1,31 @@
+ArrayList <Soldier> Soldiers = new ArrayList <Soldier>();
+ArrayList <Projectile> Projectiles = new ArrayList <Projectile>();
+
+void setup(){
+  size(800,800);
+  Soldiers.add( new Soldier(400, 400, 100, 1));
+}
+
+void draw(){
+  background(100,100,100);
+  noStroke();
+  
+  //Soldiers aufrufen
+  for(int i=0; i<Soldiers.size(); i++){
+    Soldiers.get(i).render();
+    Soldiers.get(i).move();
+    Soldiers.get(i).shoot();
+  }
+  
+  //Projectile aufrufen
+  for(int i=0; i<Projectiles.size(); i++){
+    Projectiles.get(i).render();
+    Projectiles.get(i).move();
+  
+  }
+  
+  
+  if(mousePressed == true){
+    Soldiers.add( new Soldier(mouseX, mouseY, 100, 1));
+  }
+}

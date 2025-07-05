@@ -1,0 +1,8 @@
+0 Air Black
+1 Stone Gray
+2 Dirt Brown
+3 Iron yellow
+4 diamond Blue
+
+Map
+Layer
